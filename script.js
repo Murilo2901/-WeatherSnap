@@ -89,10 +89,11 @@ function updateUI(city, state, data) {
 
 
 function getWeatherInfo(code) {
-    if (code === 0) return { label: 'Céu Limpo', icon: 'sun', emoji: '😎' };
+    if (code === 0) return { label: 'Céu Limpo', icon: 'sun', emoji: '☀️' };
     if (code >= 1 && code <= 3) return { label: 'Nublado', icon: 'cloud', emoji: '☁️' };
     if (code >= 45 && code <= 48) return { label: 'Neblina', icon: 'cloud-fog', emoji: '🌫️' };
-    if (code >= 51 && code <= 67) return { label: 'Chuva', icon: 'cloud-rain', emoji: '☔' };
+    if (code >= 80 && code <= 82) return { label: 'Chuva com Sol', icon: 'cloud-sun-rain', emoji: '🌦️' };
+    if (code >= 51 && code <= 67) return { label: 'Chuva', icon: 'cloud-rain', emoji: '☔ ' };
     if (code >= 71 && code <= 77) return { label: 'Neve', icon: 'snowflake', emoji: '⛄' };
     if (code >= 80 && code <= 82) return { label: 'Chuva Forte', icon: 'cloud-drizzle', emoji: '🌧️' };
     if (code >= 95) return { label: 'Tempestade', icon: 'cloud-lightning', emoji: '⛈️' };
